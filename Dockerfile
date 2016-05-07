@@ -20,5 +20,5 @@ COPY script /usr/src/script
 USER nobody
 
 # Expose the application port and run application
-EXPOSE 5000
+EXPOSE 5500
 CMD ["node","app.js"]
