@@ -1,0 +1,11 @@
+#!/bin/sh
+
+name=$1
+
+echo docker pull $name
+
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+
+docker pull $name
+docker run -d -p 5500:5500 $name
